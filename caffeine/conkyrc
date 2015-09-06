@@ -1,0 +1,43 @@
+update_interval 1
+total_run_times 0
+net_avg_samples 1
+cpu_avg_samples 1
+imlib_cache_size 0
+double_buffer yes
+no_buffers yes
+use_xft yes
+xftfont Zekton:size=9
+override_utf8_locale yes
+text_buffer_size 2048
+border_inner_margin 30
+
+own_window yes
+own_window_title conky
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_argb_visual yes
+own_window_argb_value 0
+own_window_type normal
+
+
+alignment tr
+gap_x 800
+gap_y 700
+minimum_size 246 280
+default_bar_size 30 8
+draw_shades no
+default_color ffffff
+default_shade_color 000000
+color0 00d9ff
+color1 ffffff
+color2 ffffff
+color3 ff8400
+
+lua_load ./rings.lua
+lua_draw_hook_pre ring_stats
+
+TEXT
+${goto 10}${voffset -30}${color3}${font Zekton:style=regular:size=40}${time %H:%M}${color}${goto 10}${voffset 20}${font Zekton:style=bold:size=12}${color slate grey}${time %a}${color}, ${time %e %B %G}
+${goto 90}${voffset 84}${font Zekton:style=bold:size=7}CPU 0${goto 90}${voffset 9}${font Zekton:style=bold:size=7}CPU 1${goto 194}${voffset 2}${font Zekton:style=bold:size=7}${color1}HOME${goto 194}${voffset 9}${font Zekton:style=bold:size=7}${color1}ROOT
+${goto 130}${voffset 75}DOWN${goto 130}${voffset 9}UP${goto 245}${voffset -11}RAM
+
+${image ./caffeine.png -p 0,0 -s 280x246}
