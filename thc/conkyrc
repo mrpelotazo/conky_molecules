@@ -31,7 +31,7 @@ color1 ffffff
 color2 ffffff
 color3 ff8400
 
-lua_load ~/.conky/thc_mrpelotazo/rings.lua
+lua_load ./rings.lua
 lua_draw_hook_pre ring_stats
 
 TEXT
@@ -39,4 +39,4 @@ ${goto 340}${voffset 80}${color3}${font Zekton:style=regular:size=40}${time %H:%
 ${goto 100}${voffset -18}${font Zekton:style=bold:size=7}CPU 0${goto 100}${voffset 9}${font Zekton:style=bold:size=7}CPU 1
 ${goto 152}${voffset 71}${font Zekton:style=bold:size=7}${color1}HOME${goto 152}${voffset 9}${font Zekton:style=bold:size=7}${color1}ROOT${goto 262}${voffset 0}RAM${goto 367}UP${goto 367}${voffset -9}DOWN
 
-${image ~/.conky/thc_mrpelotazo/thc.png -p 0,0 -s 611x334}
+${image ./thc.png -p 0,0 -s 611x334}

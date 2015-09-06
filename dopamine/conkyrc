@@ -32,7 +32,7 @@ color1 ffffff
 color2 ffffff
 color3 ff8400
 
-lua_load ~/.conky/dopamine_mrpelotazo/rings.lua
+lua_load ./rings.lua
 lua_draw_hook_pre ring_stats
 
 TEXT
@@ -40,4 +40,4 @@ ${goto 45}${voffset 87}${font Zekton:style=bold:size=7}DOWN${goto 150}CPU 0${got
 ${goto 45}${voffset -3}UP${goto 150}CPU 1${goto 260}ROOT
 ${goto 95}${voffset 77}RAM${goto 195}${voffset -70}${color3}${font Zekton:style=regular:size=40}${time %H:%M}${color}${goto 210}${voffset 30}${font Zekton:style=bold:size=11}${color slate grey}${time %a}${color}, ${time %e %B %G}
 
-${image ~/.conky/dopamine_mrpelotazo/dopamine.png -p 0,0 -s 300x134}
+${image ./dopamine.png -p 0,0 -s 300x134}
